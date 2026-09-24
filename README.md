@@ -1,8 +1,8 @@
 # VDM-Dawn
-
+A MoE-architecture model post-trained specifically for cybersecurity scenarios.
 
 # Evaluation Overview
-VDM-Dawn was evaluated on a subset of **ExploitGym**, using commit `e4123d043774623b2274e6bbe0155a423d631f0a` of the benchmark repository.
+Our VDM-Dawn model was evaluated on a subset of **ExploitGym**, using commit `e4123d043774623b2274e6bbe0155a423d631f0a` of the benchmark repository.
 
 | Configuration | Setting |
 |---|---|
