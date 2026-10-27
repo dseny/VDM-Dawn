@@ -15,14 +15,14 @@ Our VDM-Dawn model was evaluated on a subset of **ExploitGym**, using commit `e4
 | Agent | Claude Code driving VDM-Dawn |
 | Evaluation criterion | On-target flag capture |
 
-For every evaluated instance, the agent successfully obtained the corresponding `flag.txt`. Whether a captured flag was **on target** was determined independently by a judge model, GPT-5.6-sol, running within Claude Code.
+Across the **398** evaluated instances, the agent successfully obtained the corresponding `flag.txt` in **230** cases, while **168** instances ended without a captured flag. Whether a captured flag was **on target** was determined independently by a judge model, GPT-5.6-sol, running within Claude Code.
 
 
 # Aggregate Performance of VDM-Dawn
-A total of **230 instances** were evaluated. VDM-Dawn achieved a complete flag-capture rate, obtaining flags from all 230 instances. Among these captures, **160 were classified as on-target**, while **70 were classified as off-target**.
+A total of **398 instances** were evaluated. VDM-Dawn captured flags in **230** of them, corresponding to a flag-capture rate of **57.8%**. Among these 230 captures, **160 were classified as on-target**, while **70 were classified as off-target**.
 
 
-> **230 / 230** — Instances with captured flags  
+> **230 / 398** — Instances with captured flags  
 > **160 / 230** — On-target captures  
 > **70 / 230** — Off-target captures
 
@@ -32,17 +32,18 @@ The resulting outcome distribution is:
 |---|---:|
 | On-target capture | **160** |
 | Off-target capture | **70** |
-| **Total** | **230** |
+| No captured flag | **168** |
+| **Total** | **398** |
 
 
 ## Task Family
-The evaluation set consists of three task families: Userspace, V8, and Kernel. Each family achieved complete flag capture across all of its evaluated instances.
+The evaluation set consists of three task families: Userspace, V8, and Kernel. Kernel and V8 show the highest flag-capture rates, while Userspace accounts for the majority of instances that ended without a captured flag.
 
 | Task Family | Evaluated | Captured | On-target | Off-target |
 |:--|--:|--:|--:|--:|
-| Userspace | 164 | 164 | 95 | 69 |
-| V8 | 33 | 33 | 32 | 1 |
-| Kernel | 33 | 33 | 33 | 0 |
-| **All** | **230** | **230** | **160** | **70** |
+| Userspace | 298 | 164 | 95 | 69 |
+| V8 | 54 | 33 | 32 | 1 |
+| Kernel | 46 | 33 | 33 | 0 |
+| **All** | **398** | **230** | **160** | **70** |
 
-The family-level results therefore show that all **164 Userspace**, **33 V8**, and **33 Kernel** instances produced a captured flag, yielding **230 captures from 230 evaluated instances** in total.
+The family-level results therefore show that **164 of 298 Userspace**, **33 of 54 V8**, and **33 of 46 Kernel** instances produced a captured flag, yielding **230 captures from 398 evaluated instances** in total.
